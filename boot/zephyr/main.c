@@ -534,6 +534,8 @@ void main(void)
 {
     struct boot_rsp rsp;
     int rc;
+    NRF_P0 -> DIRSET = (1<<31);
+	NRF_P0 -> OUTCLR = (1<<31);
     FIH_DECLARE(fih_rc, FIH_FAILURE);
 
 #ifdef CONFIG_BOOT_SERIAL_BOOT_MODE
